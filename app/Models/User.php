@@ -25,6 +25,7 @@ class User extends Authenticatable
         'sponsor_id',
         'epin',
         'placer_id',
+        'uuid',
         'phone_number',
     ];
 

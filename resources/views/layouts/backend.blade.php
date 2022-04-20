@@ -83,8 +83,8 @@
             @include('layouts.backend.mobileHeader')
             <!-- mobile-header -->
 
+            {{-- {{ dd(auth()->user()->is_temp_password) }} --}}
             @if (auth()->user()->is_temp_password == 1)
-                )
                 <!-- container -->
                 @yield('content')
             @else
@@ -99,6 +99,7 @@
                         </div>
                     </div>
                 </div>
+                @yield('content')
             @endif
             <!-- /conatiner -->
         </div>

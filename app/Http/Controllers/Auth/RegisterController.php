@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\IntroMail;
+// use Mail;
 use Mail;
 
 class RegisterController extends Controller
@@ -76,6 +77,7 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'uuid' => str_random(10),
             'phone_number' => $data['phone_number'],
             'sponsor_id' => $data['sponsor_id'],
             'epin' => Hash::make($data['epin']),
