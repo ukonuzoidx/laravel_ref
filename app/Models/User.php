@@ -24,7 +24,6 @@ class User extends Authenticatable
         'temp_password',
         'sponsor_id',
         'epin',
-        'placer_id',
         'uuid',
         'phone_number',
     ];
@@ -44,6 +43,26 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($value);
     }
 
+    public function getLftName()
+{
+    return 'left';
+}
+
+public function getRgtName()
+{
+    return 'right';
+}
+
+public function getParentIdName()
+{
+    return 'parent';
+}
+
+// Specify parent id attribute mutator
+public function setParentAttribute($value)
+{
+    $this->setParentIdAttribute($value);
+}
     /**
      * The attributes that should be cast.
      *

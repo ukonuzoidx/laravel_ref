@@ -83,7 +83,7 @@
     <div class="my-auto page page-h">
         <div class="main-signin-wrapper">
             <div class="main-card-signin d-md-flex wd-100p">
-                <div class="wd-md-50p login d-none d-md-block page-signin-style p-5 text-white">
+                <div class="wd-md-30p login d-none d-md-block page-signin-style p-5 text-white">
                     <div class="my-auto authentication-pages">
                         <div>
                             <img src="{{ asset('assets/img/brand/logo-white.png') }}" class="m-0 mb-4" alt="logo">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sign-up-body wd-md-50p">
+                <div class="sign-up-body wd-md-70p">
                     <div class="main-signin-header">
                         <h2>Welcome back!</h2>
                         <h4>Please Register with SHIB</h4>

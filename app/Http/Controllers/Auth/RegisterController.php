@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\IntroMail;
-// use Mail;
+use Kalnoy\Nestedset\NodeTrait;
 use Mail;
 
 class RegisterController extends Controller
@@ -25,7 +25,7 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    use RegistersUsers, NodeTrait;
 
     /**
      * Where to redirect users after registration.
