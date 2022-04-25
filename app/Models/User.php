@@ -43,26 +43,26 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($value);
     }
 
-    public function getLftName()
-{
-    return 'left';
-}
+     public function getLftName()
+    {
+        return 'left';
+    }
 
-public function getRgtName()
-{
-    return 'right';
-}
+    public function getRgtName()
+    {
+        return 'right';
+    }
 
-public function getParentIdName()
-{
-    return 'parent';
-}
+    public function getParentIdName()
+    {
+        return 'parent';
+    }
 
 // Specify parent id attribute mutator
-public function setParentAttribute($value)
-{
-    $this->setParentIdAttribute($value);
-}
+    public function setParentAttribute($value)
+    {
+        $this->setParentIdAttribute($value);
+    }
     /**
      * The attributes that should be cast.
      *
@@ -71,4 +71,11 @@ public function setParentAttribute($value)
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getReferrals()
+    {
+        return Referral::all()->map(function ($program) {
+            return ReferralLink::getReferral($this, $program);
+        });
+    }
 }
